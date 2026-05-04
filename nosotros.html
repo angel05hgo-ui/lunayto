@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiénes Somos – Luna y Tom</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .hero-nosotros {
+      background: linear-gradient(135deg, var(--rosa-claro) 0%, #fff 55%, var(--rosa-medio) 100%);
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+    }
+    .hero-nosotros h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      color: var(--texto-oscuro);
+    }
+    .hero-nosotros h1 em { color: var(--rosa-fuerte); font-style: italic; }
+    .hero-nosotros p {
+      max-width: 500px;
+      margin: 1rem auto 0;
+      color: var(--texto-gris);
+      line-height: 1.8;
+    }
+
+    /* ── TARJETAS PERSONAS ── */
+    .persona-card {
+      background: var(--blanco);
+      border: 1.5px solid var(--rosa-borde);
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      height: 100%;
+      transition: transform .25s, box-shadow .25s;
+    }
+    .persona-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(233,30,140,.13);
+    }
+    .persona-avatar {
+      width: 100px; height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--rosa-medio), var(--rosa-fuerte));
+      margin: 0 auto 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.8rem;
+      border: 4px solid var(--blanco);
+      box-shadow: 0 4px 16px rgba(233,30,140,.2);
+    }
+    .persona-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      margin-bottom: .2rem;
+    }
+    .persona-card .rol {
+      font-size: .8rem;
+      color: var(--rosa-fuerte);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: .5rem;
+    }
+    .persona-card .universidad {
+      font-size: .85rem;
+      color: var(--texto-gris);
+    }
+    .persona-card .universidad i { color: var(--rosa-fuerte); }
+
+    /* ── MASCOTAS ── */
+    .mascotas-section {
+      background: var(--blanco);
+      border-top: 2px solid var(--rosa-claro);
+      border-bottom: 2px solid var(--rosa-claro);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .mascota-card {
+      background: var(--rosa-suave);
+      border: 1.5px solid var(--rosa-borde);
+      border-radius: 20px;
+      padding: 2rem 1.5rem;
+      transition: transform .25s;
+    }
+    .mascota-card:hover { transform: translateY(-4px); }
+    .mascota-emoji { font-size: 4rem; margin-bottom: .8rem; }
+    .mascota-card h5 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      margin-bottom: .3rem;
+    }
+    .mascota-card p {
+      font-size: .9rem;
+      color: var(--texto-gris);
+      margin: 0;
+    }
+
+    .firma {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-style: italic;
+      color: var(--rosa-fuerte);
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════ NAVBAR ══════════ -->
+<nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">🌸 Luna <span>&amp;</span> Tom</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link active" href="nosotros.html">Quiénes Somos</a></li>
+        <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        <li class="nav-item"><a class="nav-link" href="terminos.html">Términos</a></li>
+        <li class="nav-item"><a class="nav-link" href="requerimientos.html">Requerimientos</a></li>
+        <li class="nav-item ms-lg-3">
+          <a href="index.html#pedido" class="btn-luna">
+            <i class="bi bi-bag-heart me-1"></i> Hacer Pedido
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero-nosotros fade-in">
+  <p class="hero-eyebrow">✦ Quiénes Somos ✦</p>
+  <h1>Un proyecto hecho<br><em>con amor</em></h1>
+  <p>Esta pastelería nació de la pasión por la repostería y de querer crear algo especial juntos.</p>
+</section>
+
+<!-- ══════════ PERSONAS ══════════ -->
+<section class="container py-5">
+  <div class="divider">✦ ✦ ✦</div>
+  <h2 class="section-title">Las personas detrás</h2>
+  <p class="section-subtitle">Dos estudiantes INACAP con un dulce proyecto en común</p>
+
+  <div class="row g-4 justify-content-center">
+
+    <div class="col-sm-6 col-lg-5 fade-in">
+      <div class="persona-card">
+        <div class="persona-avatar">👩‍🍳</div>
+        <h4>Catalina Ortiz</h4>
+        <div class="rol">La repostera del equipo</div>
+        <p class="universidad mt-2">
+          <i class="bi bi-mortarboard-fill me-1"></i>
+          Gastronomía · INACAP
+        </p>
+        <p class="mt-3" style="color:var(--texto-gris); font-size:.9rem; line-height:1.7;">
+          La mente creativa detrás de cada receta. Su pasión por la repostería es lo que le da sabor y alma a este proyecto.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-lg-5 fade-in">
+      <div class="persona-card">
+        <div class="persona-avatar">👨‍💻</div>
+        <h4>El desarrollador</h4>
+        <div class="rol">El que construyó la web</div>
+        <p class="universidad mt-2">
+          <i class="bi bi-mortarboard-fill me-1"></i>
+          Ingeniería en Informática · INACAP
+        </p>
+        <p class="mt-3" style="color:var(--texto-gris); font-size:.9rem; line-height:1.7;">
+          Hizo esta página como un regalo para quien más admira. Porque a veces el código también puede ser una forma de decir te quiero.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════ MASCOTAS ══════════ -->
+<section class="mascotas-section fade-in">
+  <div class="container">
+    <p class="hero-eyebrow">✦ La inspiración del nombre ✦</p>
+    <h2 class="section-title mb-2">Luna y Tom</h2>
+    <p class="section-subtitle">Nuestras mascotas y las verdaderas jefas del negocio 🐾</p>
+
+    <div class="row g-4 justify-content-center mt-2">
+      <div class="col-sm-5 col-md-4 fade-in">
+        <div class="mascota-card">
+          <div class="mascota-emoji">🌙</div>
+          <h5>Luna</h5>
+          <p>La más elegante. Inspira la delicadeza de cada postre.</p>
+        </div>
+      </div>
+      <div class="col-sm-5 col-md-4 fade-in">
+        <div class="mascota-card">
+          <div class="mascota-emoji">🐾</div>
+          <h5>Tom</h5>
+          <p>El más juguetón. Le da el toque especial y dulce a todo.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="firma mt-5">— Hecho con amor, para Cata 🌸</p>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="container">
+    <div class="row gy-3">
+      <div class="col-md-4">
+        <div class="brand">🌸 Luna y Tom</div>
+        <p>Pastelería artesanal con alma.<br>Punta Arenas, Chile.</p>
+        <div class="mt-2">
+          <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-tiktok"></i></a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <strong>Navegación</strong>
+        <ul class="list-unstyled mt-2">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Quiénes Somos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="terminos.html">Términos y Condiciones</a></li>
+          <li><a href="requerimientos.html">Requerimientos</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <strong>Contacto</strong>
+        <ul class="list-unstyled mt-2">
+          <li><i class="bi bi-telephone me-1"></i> +56 9 1234 5678</li>
+          <li><i class="bi bi-envelope me-1"></i> hola@lunayto.cl</li>
+          <li><i class="bi bi-geo-alt me-1"></i> Av. Colón 123, Punta Arenas</li>
+        </ul>
+      </div>
+    </div>
+    <hr />
+    <p class="text-center mb-0" style="opacity:.6;">
+      © 2026 Luna y Tom · Pastelería Artesanal · Todos los derechos reservados.
+    </p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (en.isIntersecting) { en.target.classList.add('visible'); obs.unobserve(en.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
