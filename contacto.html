@@ -28,8 +28,6 @@
       color: var(--texto-gris);
       line-height: 1.8;
     }
-
-    /* ── INFO CARDS ── */
     .info-card {
       background: var(--blanco);
       border: 1.5px solid var(--rosa-borde);
@@ -39,10 +37,7 @@
       height: 100%;
       transition: transform .25s, box-shadow .25s;
     }
-    .info-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 14px 36px rgba(233,30,140,.12);
-    }
+    .info-card:hover { transform: translateY(-5px); box-shadow: 0 14px 36px rgba(233,30,140,.12); }
     .info-icon {
       width: 56px; height: 56px;
       border-radius: 50%;
@@ -50,115 +45,25 @@
       border: 2px solid var(--rosa-borde);
       color: var(--rosa-fuerte);
       font-size: 1.4rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: flex; align-items: center; justify-content: center;
       margin: 0 auto .9rem;
     }
-    .info-card h6 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      margin-bottom: .3rem;
-    }
-    .info-card p {
-      font-size: .9rem;
-      color: var(--texto-gris);
-      margin: 0;
-      line-height: 1.6;
-    }
-    .info-card a {
-      color: var(--rosa-fuerte);
-      text-decoration: none;
-      font-weight: 600;
-    }
+    .info-card h6 { font-family: 'Playfair Display', serif; font-size: 1rem; margin-bottom: .3rem; }
+    .info-card p  { font-size: .9rem; color: var(--texto-gris); margin: 0; line-height: 1.6; }
+    .info-card a  { color: var(--rosa-fuerte); text-decoration: none; font-weight: 600; }
     .info-card a:hover { text-decoration: underline; }
-
-    /* ── MAPA ── */
-    .mapa-wrapper {
-      border-radius: 18px;
-      overflow: hidden;
-      border: 2px solid var(--rosa-borde);
-      box-shadow: 0 8px 32px rgba(233,30,140,.08);
-    }
-    .mapa-wrapper iframe {
-      width: 100%;
-      height: 340px;
-      border: none;
-      display: block;
-    }
-
-    /* ── HORARIOS ── */
-    .horario-table {
-      background: var(--blanco);
-      border: 1.5px solid var(--rosa-borde);
-      border-radius: 18px;
-      overflow: hidden;
-    }
+    .mapa-wrapper { border-radius: 18px; overflow: hidden; border: 2px solid var(--rosa-borde); box-shadow: 0 8px 32px rgba(233,30,140,.08); }
+    .mapa-wrapper iframe { width: 100%; height: 340px; border: none; display: block; }
+    .horario-table { background: var(--blanco); border: 1.5px solid var(--rosa-borde); border-radius: 18px; overflow: hidden; }
     .horario-table table { margin: 0; }
-    .horario-table thead th {
-      background: var(--rosa-fuerte);
-      color: #fff;
-      font-family: 'Playfair Display', serif;
-      font-size: 1rem;
-      font-weight: 400;
-      padding: .9rem 1.2rem;
-      border: none;
-    }
-    .horario-table tbody td {
-      padding: .75rem 1.2rem;
-      border-color: var(--rosa-claro);
-      font-size: .9rem;
-      color: var(--texto-oscuro);
-    }
+    .horario-table thead th { background: var(--rosa-fuerte); color: #fff; font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; padding: .9rem 1.2rem; border: none; }
+    .horario-table tbody td { padding: .75rem 1.2rem; border-color: var(--rosa-claro); font-size: .9rem; color: var(--texto-oscuro); }
     .horario-table tbody tr:nth-child(even) { background: var(--rosa-suave); }
-    .badge-abierto {
-      background: #e8f5e9;
-      color: #2e7d32;
-      border: 1px solid #a5d6a7;
-      border-radius: 50px;
-      font-size: .75rem;
-      font-weight: 700;
-      padding: .2rem .7rem;
-    }
-    .badge-cerrado {
-      background: var(--rosa-claro);
-      color: var(--rosa-fuerte);
-      border: 1px solid var(--rosa-borde);
-      border-radius: 50px;
-      font-size: .75rem;
-      font-weight: 700;
-      padding: .2rem .7rem;
-    }
-
-    /* ── REDES ── */
-    .red-card {
-      background: var(--blanco);
-      border: 1.5px solid var(--rosa-borde);
-      border-radius: 14px;
-      padding: 1.2rem 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      text-decoration: none;
-      color: var(--texto-oscuro);
-      transition: transform .2s, box-shadow .2s;
-    }
-    .red-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 24px rgba(233,30,140,.12);
-      color: var(--texto-oscuro);
-    }
-    .red-card .red-icon {
-      width: 44px; height: 44px;
-      border-radius: 50%;
-      background: var(--rosa-claro);
-      color: var(--rosa-fuerte);
-      font-size: 1.3rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
+    .badge-abierto { background: #e8f5e9; color: #2e7d32; border: 1px solid #a5d6a7; border-radius: 50px; font-size: .75rem; font-weight: 700; padding: .2rem .7rem; }
+    .badge-cerrado { background: var(--rosa-claro); color: var(--rosa-fuerte); border: 1px solid var(--rosa-borde); border-radius: 50px; font-size: .75rem; font-weight: 700; padding: .2rem .7rem; }
+    .red-card { background: var(--blanco); border: 1.5px solid var(--rosa-borde); border-radius: 14px; padding: 1.2rem 1.5rem; display: flex; align-items: center; gap: 1rem; text-decoration: none; color: var(--texto-oscuro); transition: transform .2s, box-shadow .2s; }
+    .red-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(233,30,140,.12); color: var(--texto-oscuro); }
+    .red-card .red-icon { width: 44px; height: 44px; border-radius: 50%; background: var(--rosa-claro); color: var(--rosa-fuerte); font-size: 1.3rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .red-card span { font-weight: 600; font-size: .95rem; }
     .red-card small { color: var(--texto-gris); font-size: .82rem; }
   </style>
@@ -243,42 +148,69 @@
       <div class="form-card" style="max-width:100%; box-shadow:none; padding:0; border:none; background:transparent;">
         <form id="formContacto" novalidate>
 
+          <!-- NOMBRE: solo letras -->
           <div class="mb-3">
-            <label class="form-label" for="cnombre">Nombre</label>
-            <input type="text" class="form-control" id="cnombre" placeholder="Tu nombre" required minlength="3" />
-            <div class="invalid-feedback">Ingresa tu nombre.</div>
+            <label class="form-label" for="cnombre">Nombre *</label>
+            <input
+              type="text"
+              class="form-control"
+              id="cnombre"
+              data-tipo="texto"
+              placeholder="Ej: Catalina Ortiz"
+              required
+              minlength="3"
+              pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]{3,}$"
+            />
+            <div class="invalid-feedback">Ingresa tu nombre (solo letras, mínimo 3 caracteres).</div>
           </div>
 
+          <!-- EMAIL: formato válido -->
           <div class="mb-3">
-            <label class="form-label" for="cemail">Correo electrónico</label>
-            <input type="email" class="form-control" id="cemail" placeholder="tu@correo.com" required />
-            <div class="invalid-feedback">Ingresa un correo válido.</div>
+            <label class="form-label" for="cemail">Correo electrónico *</label>
+            <input
+              type="email"
+              class="form-control"
+              id="cemail"
+              placeholder="Ej: tucorreo@gmail.com"
+              required
+            />
+            <div class="invalid-feedback">Ingresa un correo electrónico válido.</div>
           </div>
 
+          <!-- ASUNTO: select obligatorio -->
           <div class="mb-3">
-            <label class="form-label" for="casunto">Asunto</label>
+            <label class="form-label" for="casunto">Asunto *</label>
             <select class="form-select" id="casunto" required>
-              <option value="">-- Selecciona --</option>
-              <option>Consulta sobre productos</option>
-              <option>Pedido personalizado</option>
-              <option>Precios y despacho</option>
-              <option>Otro</option>
+              <option value="">-- Selecciona un asunto --</option>
+              <option value="Consulta sobre productos">Consulta sobre productos</option>
+              <option value="Pedido personalizado">Pedido personalizado</option>
+              <option value="Precios y despacho">Precios y despacho</option>
+              <option value="Otro">Otro</option>
             </select>
-            <div class="invalid-feedback">Selecciona un asunto.</div>
+            <div class="invalid-feedback">Debes seleccionar un asunto.</div>
           </div>
 
+          <!-- MENSAJE: texto obligatorio -->
           <div class="mb-4">
-            <label class="form-label" for="cmensaje">Mensaje</label>
-            <textarea class="form-control" id="cmensaje" rows="4"
-                      placeholder="Escribe tu consulta aquí…" required minlength="10"></textarea>
-            <div class="invalid-feedback">Escribe tu mensaje (mínimo 10 caracteres).</div>
+            <label class="form-label" for="cmensaje">Mensaje *</label>
+            <textarea
+              class="form-control"
+              id="cmensaje"
+              rows="4"
+              placeholder="Escribe tu consulta aquí…"
+              required
+              minlength="10"
+            ></textarea>
+            <div class="invalid-feedback">El mensaje es obligatorio (mínimo 10 caracteres).</div>
           </div>
+
+          <p class="mb-3" style="font-size:.82rem; color:var(--texto-gris);">* Todos los campos son obligatorios.</p>
 
           <div class="d-flex gap-3 flex-wrap">
             <button type="submit" class="btn-luna">
               <i class="bi bi-send me-1"></i> Enviar Mensaje
             </button>
-            <button type="button" class="btn-outline-luna" onclick="this.closest('form').reset(); document.querySelectorAll('.is-invalid').forEach(e=>e.classList.remove('is-invalid'))">
+            <button type="button" class="btn-outline-luna" onclick="limpiarContacto()">
               <i class="bi bi-arrow-counterclockwise me-1"></i> Limpiar
             </button>
           </div>
@@ -299,7 +231,6 @@
       <h2 class="section-title text-start">Dónde encontrarnos</h2>
       <p class="section-subtitle text-start mb-4">Punta Arenas, Región de Magallanes</p>
 
-      <!-- Mapa embebido -->
       <div class="mapa-wrapper mb-4">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47803.08!2d-70.9185!3d-53.1638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbdafe92379f07e99%3A0x5ff3bb56df82e5f3!2sPunta%20Arenas%2C%20Regi%C3%B3n%20de%20Magallanes!5e0!3m2!1ses!2scl!4v1700000000000"
@@ -307,28 +238,13 @@
         </iframe>
       </div>
 
-      <!-- Horarios -->
       <div class="horario-table">
         <table class="table table-borderless mb-0">
-          <thead>
-            <tr><th>Día</th><th>Horario</th><th>Estado</th></tr>
-          </thead>
+          <thead><tr><th>Día</th><th>Horario</th><th>Estado</th></tr></thead>
           <tbody>
-            <tr>
-              <td>Lunes – Viernes</td>
-              <td>09:00 – 19:00</td>
-              <td><span class="badge-abierto">Abierto</span></td>
-            </tr>
-            <tr>
-              <td>Sábado</td>
-              <td>10:00 – 15:00</td>
-              <td><span class="badge-abierto">Abierto</span></td>
-            </tr>
-            <tr>
-              <td>Domingo</td>
-              <td>—</td>
-              <td><span class="badge-cerrado">Cerrado</span></td>
-            </tr>
+            <tr><td>Lunes – Viernes</td><td>09:00 – 19:00</td><td><span class="badge-abierto">Abierto</span></td></tr>
+            <tr><td>Sábado</td><td>10:00 – 15:00</td><td><span class="badge-abierto">Abierto</span></td></tr>
+            <tr><td>Domingo</td><td>—</td><td><span class="badge-cerrado">Cerrado</span></td></tr>
           </tbody>
         </table>
       </div>
@@ -342,33 +258,23 @@
     <div class="divider">✦ ✦ ✦</div>
     <h2 class="section-title">Síguenos en redes</h2>
     <p class="section-subtitle">También puedes escribirnos por Instagram o WhatsApp</p>
-
     <div class="row g-3 justify-content-center" style="max-width:600px; margin:0 auto;">
       <div class="col-12 fade-in">
         <a href="#" class="red-card">
           <div class="red-icon"><i class="bi bi-instagram"></i></div>
-          <div>
-            <span>@lunayto.pasteleria</span><br>
-            <small>Síguenos para ver nuestras creaciones</small>
-          </div>
+          <div><span>@lunayto.pasteleria</span><br><small>Síguenos para ver nuestras creaciones</small></div>
         </a>
       </div>
       <div class="col-12 fade-in">
         <a href="https://wa.me/56912345678" target="_blank" class="red-card">
           <div class="red-icon"><i class="bi bi-whatsapp"></i></div>
-          <div>
-            <span>WhatsApp</span><br>
-            <small>Escríbenos directo al +56 9 1234 5678</small>
-          </div>
+          <div><span>WhatsApp</span><br><small>Escríbenos directo al +56 9 1234 5678</small></div>
         </a>
       </div>
       <div class="col-12 fade-in">
         <a href="#" class="red-card">
           <div class="red-icon"><i class="bi bi-facebook"></i></div>
-          <div>
-            <span>Luna y Tom Pastelería</span><br>
-            <small>Encuentra nuestras promociones y novedades</small>
-          </div>
+          <div><span>Luna y Tom Pastelería</span><br><small>Encuentra nuestras promociones y novedades</small></div>
         </a>
       </div>
     </div>
@@ -408,9 +314,7 @@
       </div>
     </div>
     <hr />
-    <p class="text-center mb-0" style="opacity:.6;">
-      © 2026 Luna y Tom · Pastelería Artesanal · Todos los derechos reservados.
-    </p>
+    <p class="text-center mb-0" style="opacity:.6;">© 2026 Luna y Tom · Pastelería Artesanal · Todos los derechos reservados.</p>
   </div>
 </footer>
 
@@ -426,34 +330,78 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  /* Fade-in */
+  /* ── Fade-in ── */
   const obs = new IntersectionObserver(entries => {
-    entries.forEach(en => {
-      if (en.isIntersecting) { en.target.classList.add('visible'); obs.unobserve(en.target); }
-    });
+    entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('visible'); obs.unobserve(en.target); } });
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 
-  /* Formulario contacto */
+  /* ── Bloqueo de teclas ── */
+  /* Nombre: solo letras */
+  document.querySelectorAll('input[data-tipo="texto"]').forEach(el => {
+    el.addEventListener('keypress', e => {
+      if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]$/.test(String.fromCharCode(e.which))) e.preventDefault();
+    });
+    el.addEventListener('paste', e => {
+      if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/.test((e.clipboardData||window.clipboardData).getData('text')))
+        e.preventDefault();
+    });
+  });
+
+  /* ── Validación en tiempo real ── */
+  const camposContacto = ['cnombre', 'cemail', 'casunto', 'cmensaje'];
+  camposContacto.forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener('blur', () => validarCampoC(el));
+    el.addEventListener('input', () => { if (el.classList.contains('is-invalid')) validarCampoC(el); });
+  });
+
+  function validarCampoC(el) {
+    if (!el.checkValidity() || el.value.trim() === '') {
+      el.classList.add('is-invalid'); el.classList.remove('is-valid');
+    } else {
+      el.classList.remove('is-invalid'); el.classList.add('is-valid');
+    }
+  }
+
+  /* ── Submit ── */
   document.getElementById('formContacto').addEventListener('submit', function(e) {
     e.preventDefault();
     let valido = true;
-    ['cnombre', 'cemail', 'casunto', 'cmensaje'].forEach(id => {
+    camposContacto.forEach(id => {
       const el = document.getElementById(id);
-      if (!el.checkValidity()) { el.classList.add('is-invalid'); valido = false; }
-      else el.classList.remove('is-invalid');
+      if (!el.checkValidity() || el.value.trim() === '') {
+        el.classList.add('is-invalid'); el.classList.remove('is-valid'); valido = false;
+      } else {
+        el.classList.remove('is-invalid'); el.classList.add('is-valid');
+      }
     });
     if (!valido) return;
 
     document.getElementById('confirmacion').style.display = 'block';
     this.reset();
+    document.querySelectorAll('.is-valid').forEach(el => el.classList.remove('is-valid'));
 
     const toast = document.getElementById('toastMsg');
     toast.style.backgroundColor = '#e91e8c';
     document.getElementById('toastText').textContent = '¡Mensaje enviado! Te responderemos pronto 🌸';
-    bootstrap.Toast.getOrCreateInstance(toast, { delay: 3500 }).show();
+    bootstrap.Toast.getOrCreateInstance(toast, { delay: 3000 }).show();
   });
-</script>
 
+  /* ── Limpiar formulario ── */
+  function limpiarContacto() {
+    document.getElementById('formContacto').reset();
+    document.querySelectorAll('.is-invalid, .is-valid').forEach(el => el.classList.remove('is-invalid','is-valid'));
+    document.getElementById('confirmacion').style.display = 'none';
+  }
+
+  function mostrarToast(msg, color) {
+    const el = document.getElementById('toastMsg');
+    el.style.backgroundColor = color;
+    document.getElementById('toastText').textContent = msg;
+    bootstrap.Toast.getOrCreateInstance(el, { delay: 3000 }).show();
+  }
+</script>
 </body>
 </html>
