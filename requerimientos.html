@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quiénes Somos – Luna y Tom</title>
+  <title>Requerimientos – Luna y Tom</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
@@ -11,102 +11,62 @@
   <link rel="stylesheet" href="style.css" />
 
   <style>
-    .hero-nosotros {
+    .hero-req {
       background: linear-gradient(135deg, var(--rosa-claro) 0%, #fff 55%, var(--rosa-medio) 100%);
-      padding: 5rem 2rem 4rem;
+      padding: 4.5rem 2rem 3.5rem;
       text-align: center;
     }
-    .hero-nosotros h1 {
+    .hero-req h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-size: clamp(1.8rem, 5vw, 3rem);
       color: var(--texto-oscuro);
     }
-    .hero-nosotros h1 em { color: var(--rosa-fuerte); font-style: italic; }
-    .hero-nosotros p {
-      max-width: 500px;
-      margin: 1rem auto 0;
-      color: var(--texto-gris);
-      line-height: 1.8;
-    }
+    .hero-req h1 em { color: var(--rosa-fuerte); font-style: italic; }
+    .hero-req p { color: var(--texto-gris); font-size: .95rem; margin-top: .5rem; }
 
-    /* ── TARJETAS PERSONAS ── */
-    .persona-card {
+    .req-card {
       background: var(--blanco);
       border: 1.5px solid var(--rosa-borde);
-      border-radius: 24px;
-      padding: 2.5rem 2rem;
-      text-align: center;
+      border-radius: 16px;
+      padding: 1.4rem 1.6rem;
       height: 100%;
-      transition: transform .25s, box-shadow .25s;
+      transition: transform .2s, box-shadow .2s;
     }
-    .persona-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 16px 40px rgba(233,30,140,.13);
+    .req-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(233,30,140,.1);
     }
-    .persona-avatar {
-      width: 100px; height: 100px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--rosa-medio), var(--rosa-fuerte));
-      margin: 0 auto 1.2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.8rem;
-      border: 4px solid var(--blanco);
-      box-shadow: 0 4px 16px rgba(233,30,140,.2);
-    }
-    .persona-card h4 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      margin-bottom: .2rem;
-    }
-    .persona-card .rol {
-      font-size: .8rem;
-      color: var(--rosa-fuerte);
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      margin-bottom: .5rem;
-    }
-    .persona-card .universidad {
-      font-size: .85rem;
-      color: var(--texto-gris);
-    }
-    .persona-card .universidad i { color: var(--rosa-fuerte); }
+    .req-card .req-icon { font-size: 1.6rem; color: var(--rosa-fuerte); margin-bottom: .5rem; }
+    .req-card h6 { font-family: 'Playfair Display', serif; font-size: 1rem; margin-bottom: .3rem; }
+    .req-card p  { font-size: .85rem; color: var(--texto-gris); line-height: 1.6; margin: 0; }
 
-    /* ── MASCOTAS ── */
-    .mascotas-section {
-      background: var(--blanco);
-      border-top: 2px solid var(--rosa-claro);
-      border-bottom: 2px solid var(--rosa-claro);
-      padding: 4rem 2rem;
-      text-align: center;
+    .badge-func {
+      background: #e8f5e9; color: #2e7d32;
+      border: 1px solid #a5d6a7;
+      border-radius: 50px; font-size: .72rem;
+      font-weight: 700; padding: .15rem .6rem;
     }
-    .mascota-card {
-      background: var(--rosa-suave);
+    .badge-nofunc {
+      background: var(--rosa-claro); color: var(--rosa-fuerte);
+      border: 1px solid var(--rosa-borde);
+      border-radius: 50px; font-size: .72rem;
+      font-weight: 700; padding: .15rem .6rem;
+    }
+
+    .diagrama-box {
+      background: var(--blanco);
       border: 1.5px solid var(--rosa-borde);
       border-radius: 20px;
-      padding: 2rem 1.5rem;
-      transition: transform .25s;
+      padding: 2rem;
+      overflow-x: auto;
     }
-    .mascota-card:hover { transform: translateY(-4px); }
-    .mascota-emoji { font-size: 4rem; margin-bottom: .8rem; }
-    .mascota-card h5 {
+    .diagrama-box h5 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      margin-bottom: .3rem;
-    }
-    .mascota-card p {
-      font-size: .9rem;
-      color: var(--texto-gris);
-      margin: 0;
-    }
-
-    .firma {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      font-style: italic;
-      color: var(--rosa-fuerte);
+      font-size: 1.2rem;
+      color: var(--texto-oscuro);
+      margin-bottom: 1.5rem;
+      padding-bottom: .8rem;
+      border-bottom: 2px solid var(--rosa-claro);
     }
   </style>
 </head>
@@ -122,10 +82,10 @@
     <div class="collapse navbar-collapse" id="navMenu">
       <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
         <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link active" href="nosotros.html">Quiénes Somos</a></li>
+        <li class="nav-item"><a class="nav-link" href="nosotros.html">Quiénes Somos</a></li>
         <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
         <li class="nav-item"><a class="nav-link" href="terminos.html">Términos</a></li>
-        <li class="nav-item"><a class="nav-link" href="requerimientos.html">Requerimientos</a></li>
+        <li class="nav-item"><a class="nav-link active" href="requerimientos.html">Requerimientos</a></li>
         <li class="nav-item ms-lg-3">
           <a href="index.html#pedido" class="btn-luna">
             <i class="bi bi-bag-heart me-1"></i> Hacer Pedido
@@ -137,80 +97,285 @@
 </nav>
 
 <!-- ══════════ HERO ══════════ -->
-<section class="hero-nosotros fade-in">
-  <p class="hero-eyebrow">✦ Quiénes Somos ✦</p>
-  <h1>Un proyecto hecho<br><em>con amor</em></h1>
-  <p>Esta pastelería nació de la pasión por la repostería y de querer crear algo especial juntos.</p>
+<section class="hero-req fade-in">
+  <p class="hero-eyebrow">✦ Documentación técnica ✦</p>
+  <h1>Requerimientos<br><em>del Sistema</em></h1>
+  <p>Alcances, necesidades y diagramas del sitio web Luna y Tom.</p>
 </section>
 
-<!-- ══════════ PERSONAS ══════════ -->
+<!-- ══════════ REQUERIMIENTOS ══════════ -->
 <section class="container py-5">
   <div class="divider">✦ ✦ ✦</div>
-  <h2 class="section-title">Las personas detrás</h2>
-  <p class="section-subtitle">Dos estudiantes INACAP con un dulce proyecto en común</p>
+  <h2 class="section-title">Requerimientos del Proyecto</h2>
+  <p class="section-subtitle">Qué debe hacer y cómo debe comportarse el sistema</p>
 
-  <div class="row g-4 justify-content-center">
-
-    <div class="col-sm-6 col-lg-5 fade-in">
-      <div class="persona-card">
-        <div class="persona-avatar">👩‍🍳</div>
-        <h4>Catalina Ortiz</h4>
-        <div class="rol">La repostera del equipo</div>
-        <p class="universidad mt-2">
-          <i class="bi bi-mortarboard-fill me-1"></i>
-          Gastronomía · INACAP
-        </p>
-        <p class="mt-3" style="color:var(--texto-gris); font-size:.9rem; line-height:1.7;">
-          La mente creativa detrás de cada receta. Su pasión por la repostería es lo que le da sabor y alma a este proyecto.
-        </p>
+  <h5 class="mb-3" style="font-family:'Playfair Display',serif; color:var(--texto-oscuro);">
+    <i class="bi bi-check2-circle me-2" style="color:var(--rosa-fuerte);"></i>Requerimientos Funcionales
+  </h5>
+  <div class="row g-3 mb-5">
+    <div class="col-sm-6 col-lg-4 fade-in">
+      <div class="req-card">
+        <div class="req-icon"><i class="bi bi-grid"></i></div>
+        <span class="badge-func mb-2 d-inline-block">RF-01</span>
+        <h6>Mostrar catálogo de productos</h6>
+        <p>El sistema debe mostrar los productos disponibles con imagen, nombre, categoría y precio.</p>
       </div>
     </div>
-
-    <div class="col-sm-6 col-lg-5 fade-in">
-      <div class="persona-card">
-        <div class="persona-avatar">👨‍💻</div>
-        <h4>El desarrollador</h4>
-        <div class="rol">El que construyó la web</div>
-        <p class="universidad mt-2">
-          <i class="bi bi-mortarboard-fill me-1"></i>
-          Ingeniería en Informática · INACAP
-        </p>
-        <p class="mt-3" style="color:var(--texto-gris); font-size:.9rem; line-height:1.7;">
-          Hizo esta página como un regalo para quien más admira. Porque a veces el código también puede ser una forma de decir te quiero.
-        </p>
+    <div class="col-sm-6 col-lg-4 fade-in">
+      <div class="req-card">
+        <div class="req-icon"><i class="bi bi-bag-plus"></i></div>
+        <span class="badge-func mb-2 d-inline-block">RF-02</span>
+        <h6>Agregar productos al carrito</h6>
+        <p>El cliente puede agregar productos al carrito, que acumula la cantidad y muestra el total.</p>
       </div>
     </div>
+    <div class="col-sm-6 col-lg-4 fade-in">
+      <div class="req-card">
+        <div class="req-icon"><i class="bi bi-ui-checks"></i></div>
+        <span class="badge-func mb-2 d-inline-block">RF-03</span>
+        <h6>Formulario de pedido con validación</h6>
+        <p>El formulario valida nombre, correo, teléfono, producto, cantidad, tipo de entrega y extras.</p>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4 fade-in">
+      <div class="req-card">
+        <div class="req-icon"><i class="bi bi-envelope"></i></div>
+        <span class="badge-func mb-2 d-inline-block">RF-04</span>
+        <h6>Formulario de contacto</h6>
+        <p>El cliente puede enviar consultas mediante un formulario con nombre, correo, asunto y mensaje.</p>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4 fade-in">
+      <div class="req-card">
+        <div class="req-icon"><i class="bi bi-receipt"></i></div>
+        <span class="badge-func mb-2 d-inline-block">RF-05</span>
+        <h6>Resumen del pedido</h6>
+        <p>Al enviar el formulario se muestra un resumen con los datos ingresados por el cliente.</p>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4 fade-in">
+      <div class="req-card">
+        <div class="req-icon"><i class="bi bi-link-45deg"></i></div>
+        <span class="badge-func mb-2 d-inline-block">RF-06</span>
+        <h6>Navegación entre páginas</h6>
+        <p>El sitio cuenta con navbar que enlaza todas las páginas: Inicio, Nosotros, Contacto, Términos y Requerimientos.</p>
+      </div>
+    </div>
+  </div>
 
+  <h5 class="mb-3" style="font-family:'Playfair Display',serif; color:var(--texto-oscuro);">
+    <i class="bi bi-sliders me-2" style="color:var(--rosa-fuerte);"></i>Requerimientos No Funcionales
+  </h5>
+  <div class="row g-3">
+    <div class="col-sm-6 col-lg-4 fade-in">
+      <div class="req-card">
+        <div class="req-icon"><i class="bi bi-phone"></i></div>
+        <span class="badge-nofunc mb-2 d-inline-block">RNF-01</span>
+        <h6>Diseño responsivo</h6>
+        <p>El sitio debe verse correctamente en dispositivos móviles, tablets y escritorio usando Bootstrap.</p>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4 fade-in">
+      <div class="req-card">
+        <div class="req-icon"><i class="bi bi-palette"></i></div>
+        <span class="badge-nofunc mb-2 d-inline-block">RNF-02</span>
+        <h6>Identidad visual</h6>
+        <p>Paleta de colores rosa pastel, tipografía Playfair Display y Lato, estilo coherente en todas las páginas.</p>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-4 fade-in">
+      <div class="req-card">
+        <div class="req-icon"><i class="bi bi-file-earmark-code"></i></div>
+        <span class="badge-nofunc mb-2 d-inline-block">RNF-03</span>
+        <h6>Código separado por archivos</h6>
+        <p>HTML, CSS y JavaScript están en archivos separados (index.html, style.css, main.js).</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ══════════ MASCOTAS ══════════ -->
-<section class="mascotas-section fade-in">
+<!-- ══════════ DIAGRAMA CASOS DE USO ══════════ -->
+<section style="background:var(--blanco); border-top:2px solid var(--rosa-claro); padding:4rem 0;">
   <div class="container">
-    <p class="hero-eyebrow">✦ La inspiración del nombre ✦</p>
-    <h2 class="section-title mb-2">Luna y Tom</h2>
-    <p class="section-subtitle">Nuestras mascotas y las verdaderas jefas del negocio 🐾</p>
+    <div class="divider">✦ ✦ ✦</div>
+    <h2 class="section-title">Diagrama de Casos de Uso</h2>
+    <p class="section-subtitle">Qué puede hacer el cliente dentro del sistema</p>
 
-    <div class="row g-4 justify-content-center mt-2">
-      <div class="col-sm-5 col-md-4 fade-in">
-        <div class="mascota-card">
-          <img src="lunita.jpg" alt="Luna"
-               style="width:100%; border-radius:12px; margin-bottom:.8rem; display:block;" />
-          <h5>Luna</h5>
-          <p></p>
-        </div>
-      </div>
-      <div class="col-sm-5 col-md-4 fade-in">
-        <div class="mascota-card">
-          <img src="tom.jpg" alt="Tom"
-               style="width:100%; border-radius:12px; margin-bottom:.8rem; display:block;" />
-          <h5>Tom</h5>
-          <p></p>
-        </div>
-      </div>
+    <div class="diagrama-box fade-in">
+      <h5><i class="bi bi-people me-2" style="color:var(--rosa-fuerte);"></i>Actor: Cliente</h5>
+      <svg width="100%" viewBox="0 0 680 460" xmlns="http://www.w3.org/2000/svg">
+
+        <!-- Sistema -->
+        <rect x="180" y="30" width="420" height="410" rx="12"
+              fill="none" stroke="#c9a96e" stroke-width="1" stroke-dasharray="6 4"/>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#7a5c5c"
+              x="390" y="22" text-anchor="middle">«sistema» Sitio web Luna y Tom</text>
+
+        <!-- UC1 -->
+        <ellipse cx="390" cy="85"  rx="130" ry="24" fill="#fce4ec" stroke="#f48fb1" stroke-width="0.8"/>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b"
+              x="390" y="89" text-anchor="middle" dominant-baseline="central">Ver catálogo de productos</text>
+        <!-- UC2 -->
+        <ellipse cx="390" cy="155" rx="130" ry="24" fill="#fce4ec" stroke="#f48fb1" stroke-width="0.8"/>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b"
+              x="390" y="159" text-anchor="middle" dominant-baseline="central">Agregar productos al carrito</text>
+        <!-- UC3 -->
+        <ellipse cx="390" cy="225" rx="130" ry="24" fill="#fce4ec" stroke="#f48fb1" stroke-width="0.8"/>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b"
+              x="390" y="229" text-anchor="middle" dominant-baseline="central">Realizar pedido</text>
+        <!-- UC4 -->
+        <ellipse cx="390" cy="295" rx="130" ry="24" fill="#fce4ec" stroke="#f48fb1" stroke-width="0.8"/>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b"
+              x="390" y="299" text-anchor="middle" dominant-baseline="central">Enviar consulta de contacto</text>
+        <!-- UC5 -->
+        <ellipse cx="390" cy="365" rx="130" ry="24" fill="#fce4ec" stroke="#f48fb1" stroke-width="0.8"/>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b"
+              x="390" y="369" text-anchor="middle" dominant-baseline="central">Ver términos y condiciones</text>
+
+        <!-- Actor -->
+        <circle cx="80" cy="180" r="18" fill="none" stroke="#7a5c5c" stroke-width="1.2"/>
+        <line x1="80" y1="198" x2="80"  y2="238" stroke="#7a5c5c" stroke-width="1.2"/>
+        <line x1="56" y1="218" x2="104" y2="218" stroke="#7a5c5c" stroke-width="1.2"/>
+        <line x1="80" y1="238" x2="62"  y2="268" stroke="#7a5c5c" stroke-width="1.2"/>
+        <line x1="80" y1="238" x2="98"  y2="268" stroke="#7a5c5c" stroke-width="1.2"/>
+        <text font-family="Lato,sans-serif" font-size="13" font-weight="700" fill="#3d2b2b"
+              x="80" y="285" text-anchor="middle">Cliente</text>
+
+        <!-- Asociaciones -->
+        <line x1="98" y1="170" x2="258" y2="87"  stroke="#c9a96e" stroke-width="1"/>
+        <line x1="98" y1="180" x2="258" y2="153" stroke="#c9a96e" stroke-width="1"/>
+        <line x1="98" y1="190" x2="258" y2="223" stroke="#c9a96e" stroke-width="1"/>
+        <line x1="98" y1="200" x2="258" y2="293" stroke="#c9a96e" stroke-width="1"/>
+        <line x1="98" y1="210" x2="258" y2="363" stroke="#c9a96e" stroke-width="1"/>
+      </svg>
     </div>
+  </div>
+</section>
 
-    <p class="firma mt-5">— Hecho con amor, para Cata 🌸</p>
+<!-- ══════════ DIAGRAMA DE CLASES ══════════ -->
+<section style="padding:4rem 0;">
+  <div class="container">
+    <div class="divider">✦ ✦ ✦</div>
+    <h2 class="section-title">Diagrama de Clases</h2>
+    <p class="section-subtitle">Estructura interna del sistema y sus relaciones</p>
+
+    <div class="diagrama-box fade-in">
+      <h5><i class="bi bi-diagram-3 me-2" style="color:var(--rosa-fuerte);"></i>Clases del Sistema</h5>
+
+      <svg width="100%" viewBox="0 0 680 580" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M2 1L8 5L2 9" fill="none" stroke="#b0b0b0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+        </defs>
+
+        <!-- ══ FILA 1: Cliente | Producto | Carrito ══ -->
+
+        <!-- Cliente x=20 w=170 -->
+        <rect x="20"  y="20"  width="170" height="26" rx="4" fill="#e91e8c"/>
+        <text font-family="Lato,sans-serif" font-size="13" font-weight="700" fill="#fff"
+              x="105" y="37" text-anchor="middle">Cliente</text>
+        <rect x="20"  y="46"  width="170" height="72" fill="#fff8fb" stroke="#f48fb1" stroke-width="0.5"/>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="30" y="63">- nombre: String</text>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="30" y="79">- email: String</text>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="30" y="95">- telefono: String</text>
+        <rect x="20"  y="118" width="170" height="46" fill="#fdf0f5" stroke="#f48fb1" stroke-width="0.5"/>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="30" y="135">+ enviarPedido()</text>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="30" y="151">+ enviarConsulta()</text>
+        <rect x="20"  y="46"  width="170" height="118" fill="none" stroke="#f48fb1" stroke-width="0.5"/>
+
+        <!-- Producto x=250 w=170 -->
+        <rect x="250" y="20"  width="170" height="26" rx="4" fill="#e91e8c"/>
+        <text font-family="Lato,sans-serif" font-size="13" font-weight="700" fill="#fff"
+              x="335" y="37" text-anchor="middle">Producto</text>
+        <rect x="250" y="46"  width="170" height="88" fill="#fff8fb" stroke="#f48fb1" stroke-width="0.5"/>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="260" y="63">- id: Number</text>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="260" y="79">- nombre: String</text>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="260" y="95">- precio: Number</text>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="260" y="111">- imagen: String</text>
+        <rect x="250" y="134" width="170" height="46" fill="#fdf0f5" stroke="#f48fb1" stroke-width="0.5"/>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="260" y="151">+ mostrarCard()</text>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="260" y="167">+ agregarCarrito()</text>
+        <rect x="250" y="46"  width="170" height="134" fill="none" stroke="#f48fb1" stroke-width="0.5"/>
+
+        <!-- Carrito x=490 w=170 -->
+        <rect x="490" y="20"  width="170" height="26" rx="4" fill="#009688"/>
+        <text font-family="Lato,sans-serif" font-size="13" font-weight="700" fill="#fff"
+              x="575" y="37" text-anchor="middle">Carrito</text>
+        <rect x="490" y="46"  width="170" height="46" fill="#f0faf9" stroke="#80cbc4" stroke-width="0.5"/>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="500" y="63">- items: Producto[]</text>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="500" y="79">- total: Number</text>
+        <rect x="490" y="92"  width="170" height="82" fill="#e0f7f4" stroke="#80cbc4" stroke-width="0.5"/>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="500" y="109">+ agregar(p)</text>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="500" y="125">+ calcularTotal()</text>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="500" y="141">+ mostrar()</text>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="500" y="157">+ actualizarContador()</text>
+        <rect x="490" y="46"  width="170" height="128" fill="none" stroke="#80cbc4" stroke-width="0.5"/>
+
+        <!-- ══ RELACIONES FILA 1 ══ -->
+
+        <!-- Carrito → Producto: usa (horizontal) -->
+        <line x1="488" y1="90" x2="422" y2="90"
+              stroke="#b0b0b0" stroke-width="0.8" marker-end="url(#arr)"/>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#7a5c5c" x="432" y="82">usa</text>
+
+        <!-- ══ FILA 2: Pedido | Formulario ══ -->
+
+        <!-- flecha vertical Cliente → Pedido -->
+        <line x1="105" y1="164" x2="105" y2="298"
+              stroke="#b0b0b0" stroke-width="0.8" marker-end="url(#arr)"/>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#7a5c5c" x="112" y="236">realiza</text>
+
+        <!-- Pedido x=20 y=300 w=200 -->
+        <rect x="20"  y="300" width="200" height="26"  rx="4" fill="#e91e8c"/>
+        <text font-family="Lato,sans-serif" font-size="13" font-weight="700" fill="#fff"
+              x="120" y="317" text-anchor="middle">Pedido</text>
+        <rect x="20"  y="326" width="200" height="104" fill="#fff8fb" stroke="#f48fb1" stroke-width="0.5"/>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="30" y="343">- id: Number</text>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="30" y="359">- cliente: Cliente</text>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="30" y="375">- productos: Producto[]</text>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="30" y="391">- tipoEntrega: String</text>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="30" y="407">- extras: String[]</text>
+        <rect x="20"  y="430" width="200" height="68"  fill="#fdf0f5" stroke="#f48fb1" stroke-width="0.5"/>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="30" y="447">+ calcularTotal()</text>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="30" y="463">+ mostrarResumen()</text>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="30" y="479">+ validar()</text>
+        <rect x="20"  y="326" width="200" height="172" fill="none" stroke="#f48fb1" stroke-width="0.5"/>
+
+        <!-- Pedido → Producto: contiene (L-bend hacia fila 1) -->
+        <path d="M220 340 L335 340 L335 180"
+              fill="none" stroke="#b0b0b0" stroke-width="0.8" marker-end="url(#arr)"/>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#7a5c5c" x="248" y="330">contiene</text>
+
+        <!-- Pedido → Formulario: usa (horizontal punteado) -->
+        <line x1="222" y1="420" x2="248" y2="420"
+              stroke="#b0b0b0" stroke-width="0.8" stroke-dasharray="5 3" marker-end="url(#arr)"/>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#7a5c5c" x="226" y="412">usa</text>
+
+        <!-- Formulario x=250 y=360 w=170 -->
+        <rect x="250" y="360" width="170" height="26"  rx="4" fill="#009688"/>
+        <text font-family="Lato,sans-serif" font-size="13" font-weight="700" fill="#fff"
+              x="335" y="377" text-anchor="middle">Formulario</text>
+        <rect x="250" y="386" width="170" height="46"  fill="#f0faf9" stroke="#80cbc4" stroke-width="0.5"/>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="260" y="403">- campos: String[]</text>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="260" y="419">- errores: String[]</text>
+        <rect x="250" y="432" width="170" height="68"  fill="#e0f7f4" stroke="#80cbc4" stroke-width="0.5"/>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="260" y="449">+ validar()</text>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="260" y="465">+ mostrarError()</text>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#3d2b2b" x="260" y="481">+ limpiar()</text>
+        <rect x="250" y="386" width="170" height="114" fill="none" stroke="#80cbc4" stroke-width="0.5"/>
+
+        <!-- ══ LEYENDA ══ -->
+        <line x1="30"  y1="542" x2="68"  y2="542" stroke="#b0b0b0" stroke-width="0.8" marker-end="url(#arr)"/>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#7a5c5c" x="74"  y="546">Asociación</text>
+        <line x1="180" y1="542" x2="218" y2="542" stroke="#b0b0b0" stroke-width="0.8" stroke-dasharray="5 3" marker-end="url(#arr)"/>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#7a5c5c" x="224" y="546">Dependencia</text>
+        <rect x="360" y="534" width="12" height="12" rx="2" fill="#e91e8c"/>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#7a5c5c" x="378" y="544">Entidades del negocio</text>
+        <rect x="530" y="534" width="12" height="12" rx="2" fill="#009688"/>
+        <text font-family="Lato,sans-serif" font-size="11" fill="#7a5c5c" x="548" y="544">Componentes UI</text>
+      </svg>
+    </div>
   </div>
 </section>
 
@@ -259,7 +424,7 @@
     entries.forEach(en => {
       if (en.isIntersecting) { en.target.classList.add('visible'); obs.unobserve(en.target); }
     });
-  }, { threshold: 0.1 });
+  }, { threshold: 0.08 });
   document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 </script>
 
